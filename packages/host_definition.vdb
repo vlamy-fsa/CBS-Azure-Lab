@@ -1,0 +1,2 @@
+# Host Definition section
+hd=default,user=root,shell=ssh,jvms=2
