@@ -1,0 +1,4 @@
+# Storage Definitions
+sd=default,openflags=directio,align=4k
+# Devices per host (all identicals, here)
+sd=mpatha-part1,lun=/dev/mapper/mpatha
