@@ -1,0 +1,41 @@
+# Data Reduction set to 3.9:1 on Purity 4.5.x
+dedupratio=3
+dedupunit=4k
+compratio=3
+
+include=/root/AFA/pure_test/vdb-shortRunsProfiles/Profiles/host_definition.vdb
+include=/root/AFA/pure_test/vdb-shortRunsProfiles/Profiles/storage_definition.vdb
+
+# Workflows definition
+# The Oracle workload is confined to the 1st 25% of the LBA of each of the Purity Volumes
+# The Oracle workload has an overall Read Percentage = 83,14%
+# Oracle Reads IO distribution:
+wd=default,rdpct=100,xfersize=(4k,4.5,8k,41.05,16k,29.84,32k,1.23,56k,1.39,128k,15.19,252k,5.23,420k,0.18,1004k,1.39),range=(0,25),sd=mpath*
+wd=oracle1_read,seekpct=64
+wd=oracle2_read,seekpct=65
+wd=oracle3_read,seekpct=51
+wd=oracle4_read,seekpct=50
+wd=oracle5_read,seekpct=77
+
+# Oracle Writes IO distribution:
+# The Oracle workload is confined to the 1st 10% of the LBA of each of the Purity Volumes
+# The Oracle write workload drifts 3.75% on each of the 5 steps - see range values wd=default,rdpct=0,xfersize=(4k,22.1,8k,37.3,16k,19.12,32k,5.35,56k,4.68,120k,7.65,236k,3.34,408k,0.15,944k,0.31),sd=sd*
+wd=oracle1_write,seekpct=90,range=(0,10)
+wd=oracle2_write,seekpct=64,range=(3.75,13.75)
+wd=oracle3_write,seekpct=56,range=(7.5,17.5)
+wd=oracle4_write,seekpct=90,range=(11.25,21.25)
+wd=oracle5_write,seekpct=74,range=(15,25)
+
+# Running oracleX read and writes sequentially iteration
+# all for 10 hours (total of 36000 seconds)
+rd=default,forrdpct=83.14
+#rd=oracle1,iorate=max,interval=60,elapsed=6900,maxdata=999t,wd=oracle1*
+#rd=oracle2,iorate=max,interval=60,elapsed=7260,maxdata=999t,wd=oracle2*
+#rd=oracle3,iorate=max,interval=60,elapsed=6780,maxdata=999t,wd=oracle3*
+#rd=oracle4,iorate=max,interval=60,elapsed=7620,maxdata=999t,wd=oracle4*
+#rd=oracle5,iorate=max,interval=60,elapsed=7440,maxdata=999t,wd=oracle5*
+rd=oracle1,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle1*
+rd=oracle2,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle2*
+rd=oracle3,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle3*
+rd=oracle4,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle4*
+rd=oracle5,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle5*
