@@ -3,8 +3,8 @@ dedupratio=3
 dedupunit=4k
 compratio=3
 
-include=/root/AFA/pure_test/vdb-shortRunsProfiles/Profiles/host_definition.vdb
-include=/root/AFA/pure_test/vdb-shortRunsProfiles/Profiles/storage_definition.vdb
+include=/root/db_workloads/host_definition.vdb
+include=/root/db_workloads/storage_definition.vdb
 
 # Workflows definition
 # The Oracle workload is confined to the 1st 25% of the LBA of each of the Purity Volumes
