@@ -31,11 +31,11 @@ wd=sql5_write,seekpct=69,range=(60,75)
 # Running SQL read and writes sequentially iteration
 # all for 10 hours (total of 36000 seconds) – not aligned to other profiles timing
 rd=default,forrdpct=68.42
-rd=sql1,iorate=max,interval=60,elapsed=6960,maxdata=999t,wd=sql*
-rd=sql2,iorate=max,interval=60,elapsed=7680,maxdata=999t,wd=sql*
-rd=sql3,iorate=max,interval=60,elapsed=7860,maxdata=999t,wd=sql*
-rd=sql4,iorate=max,interval=60,elapsed=7800,maxdata=999t,wd=sql*
-rd=sql5,iorate=max,interval=60,elapsed=5700,maxdata=999t,wd=sql*
+rd=sql1,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=sql*
+rd=sql2,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=sql*
+rd=sql3,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=sql*
+rd=sql4,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=sql*
+rd=sql5,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=sql*
 #rd=sql1,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=sql*
 #rd=sql2,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=sql*
 #rd=sql3,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=sql*
