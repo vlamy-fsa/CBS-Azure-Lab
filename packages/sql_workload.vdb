@@ -3,8 +3,8 @@ dedupratio=2
 dedupunit=4k
 compratio=2
 
-include=/root/AFA/pure_test/vdb-longRunsProfiles/Profiles/host_definition.vdb
-include=/root/AFA/pure_test/vdb-longRunsProfiles/Profiles/storage_definition.vdb
+include=/root/db_workloads/host_definition.vdb
+include=/root/db_workloads/storage_definition.vdb
 
 # Workflows definition
 # The SQL workload has an overall Read Percentage = 68.42%
