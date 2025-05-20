@@ -29,11 +29,11 @@ wd=oracle5_write,seekpct=74,range=(15,25)
 # Running oracleX read and writes sequentially iteration
 # all for 10 hours (total of 36000 seconds)
 rd=default,forrdpct=83.14
-#rd=oracle1,iorate=max,interval=60,elapsed=6900,maxdata=999t,wd=oracle1*
-#rd=oracle2,iorate=max,interval=60,elapsed=7260,maxdata=999t,wd=oracle2*
-#rd=oracle3,iorate=max,interval=60,elapsed=6780,maxdata=999t,wd=oracle3*
-#rd=oracle4,iorate=max,interval=60,elapsed=7620,maxdata=999t,wd=oracle4*
-#rd=oracle5,iorate=max,interval=60,elapsed=7440,maxdata=999t,wd=oracle5*
+#rd=oracle1,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=oracle1*
+#rd=oracle2,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=oracle2*
+#rd=oracle3,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=oracle3*
+#rd=oracle4,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=oracle4*
+#rd=oracle5,iorate=max,interval=60,elapsed=3600,maxdata=999t,wd=oracle5*
 rd=oracle1,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle1*
 rd=oracle2,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle2*
 rd=oracle3,iorate=max,interval=10,elapsed=60,maxdata=999t,wd=oracle3*
